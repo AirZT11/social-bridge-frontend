@@ -25,7 +25,7 @@ import { useNavigate } from "react-router-dom"
 import FlexBetween from "../../components/FlexBetween"
 import { setLogout, setMode } from "../../state"
 
-const Navbar = ({}) => {
+const Navbar = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false)
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
@@ -39,7 +39,6 @@ const Navbar = ({}) => {
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
 
-  console.log("!@ User: ", user)
   const fullName = `${user?.firstName} ${user?.lastName}`
 
   return (
