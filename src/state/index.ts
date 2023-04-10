@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-interface User {
+export interface User {
   _id: string
   firstName: string
   lastName: string
@@ -14,7 +14,7 @@ interface User {
   timestamp: string
 }
 
-interface Post {
+export interface Post {
   _id: string
   userId: string
   firstName: string
