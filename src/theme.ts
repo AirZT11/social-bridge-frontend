@@ -1,3 +1,4 @@
+import { ThemeMode } from "./state"
 // color design tokens export
 export const colorTokens = {
   grey: {
@@ -30,7 +31,7 @@ export const colorTokens = {
 }
 
 // mui theme settings
-export const themeSettings = (mode: any) => {
+export const themeSettings = (mode: ThemeMode) => {
   return {
     palette: {
       mode: mode,
