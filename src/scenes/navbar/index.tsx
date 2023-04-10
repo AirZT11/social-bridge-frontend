@@ -39,14 +39,15 @@ const Navbar = ({}) => {
   const primaryLight = theme.palette.primary.light
   const alt = theme.palette.background.alt
 
+  console.log("!@ User: ", user)
   const fullName = `${user?.firstName} ${user?.lastName}`
 
   return (
-    <FlexBetween padding="1rem 6%" sx={{ backgroundColor: alt }}>
+    <FlexBetween padding="1rem 6%" bgcolor={alt}>
       <FlexBetween gap="1.75rem">
         <Typography
           fontWeight={"bold"}
-          fontSize="clamp(1re,2ren,2.25rem)"
+          fontSize="clamp(1rem,2rem,2.25rem)"
           color="primary"
           onClick={() => navigate("/home")}
           sx={{
@@ -60,7 +61,7 @@ const Navbar = ({}) => {
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
-            sx={{ backgroundColor: neutralLight }}
+            bgcolor={neutralLight}
             borderRadius="9px"
             gap="3rem"
             padding="0.1rem 1.5rem"
@@ -95,7 +96,7 @@ const Navbar = ({}) => {
                 backgroundColor: neutralLight,
                 width: "150px",
                 borderRadius: "0.25rem",
-                p: "0.25ren 1rem",
+                p: "0.25rem 1rem",
                 "& .MuiSvgIcon-root": {
                   pr: "0.25rem",
                   width: "3rem",
@@ -165,7 +166,8 @@ const Navbar = ({}) => {
             <Help sx={{ fontSize: "25px" }} />
             <FormControl
               variant="standard"
-              /* value={fullName} */ component="div"
+              /* value={fullName} */
+              component="div"
             >
               <Select
                 value={fullName}
@@ -173,7 +175,7 @@ const Navbar = ({}) => {
                   backgroundColor: neutralLight,
                   width: "150px",
                   borderRadius: "0.25rem",
-                  p: "0.25ren 1rem",
+                  p: "0.25rem 1rem",
                   "& .MuiSvgIcon-root": {
                     pr: "0.25rem",
                     width: "3rem",
