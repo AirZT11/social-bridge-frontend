@@ -6,7 +6,7 @@ import { useMemo } from "react"
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { createTheme } from "@mui/material/styles"
 import { themeSettings } from "./theme"
-import { useAppSelector } from "."
+import { useAppSelector } from "./store"
 
 function App() {
   const mode = useAppSelector((state) => state.mode)

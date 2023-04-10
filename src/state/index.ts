@@ -30,8 +30,10 @@ interface Post {
   timestamp: string
 }
 
+export type ThemeMode = "light" | "dark"
+
 interface InitialState {
-  mode: "light" | "dark"
+  mode: ThemeMode
   user: User | null
   token: string | null
   posts: Post[]
@@ -48,14 +50,14 @@ export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setMode: (state, action) => {
+    setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light"
     },
     setLogin: (state, action) => {
       state.user = action.payload.user
       state.token = action.payload.token
     },
-    setLogout: (state, action) => {
+    setLogout: (state) => {
       state.user = null
       state.token = null
     },
