@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux"
 import Dropzone from "react-dropzone"
 import { setLogin } from "../../state"
 import FlexBetween from "../../components/FlexBetween"
+import { Image } from "../../types/image"
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -38,9 +39,7 @@ interface InitialFormValuesProps {
   lastName?: string
   location?: string
   occupation?: string
-  picture?: {
-    name: string | Blob
-  }
+  picture?: Image
 }
 
 const initialValuesRegister: InitialFormValuesProps = {

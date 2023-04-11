@@ -14,6 +14,9 @@ export interface User {
   timestamp: string
 }
 
+export interface Likes {
+  id: boolean
+}
 export interface Post {
   _id: string
   userId: string
@@ -23,9 +26,7 @@ export interface Post {
   description: string
   picturePath: string
   userPicturePath: string
-  likes: {
-    id: boolean
-  }
+  likes: Likes
   comments: any[]
   timestamp: string
 }
